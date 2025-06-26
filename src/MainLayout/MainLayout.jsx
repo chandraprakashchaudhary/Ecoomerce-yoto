@@ -13,7 +13,7 @@ const MainLayout = () => {
   return (
     <div>
       <Navbar />
-      <main className="max-w-7xl mx-auto bg-white dark:bg-gray-900">
+      <main className="">
         <Outlet />
       </main>
       <Footer />

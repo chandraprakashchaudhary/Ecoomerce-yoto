@@ -15,7 +15,7 @@ const Navbar = () => {
   const cartItems = useSelector((state) => state.cart.items);
   console.log("ssdfd", cartItems);
   return (
-    <div className="sticky top-0 z-50">
+    <>
       {/* nabvar top  */}
       <div className="navbar_top flex items-center justify-center bg-[#272343] h-[45px] w-full ">
         <div className="lg:container flex justify-between items-center">
@@ -47,7 +47,7 @@ const Navbar = () => {
       </div>
 
       {/* navbar middle  */}
-      <div className="navbar_middle flex items-center justify-center bg-[#f0f2f3] w-full h-[84px] ">
+      <div className="navbar_middle sticky shadow-sm top-0 z-50 flex items-center justify-center bg-[#f0f2f3] w-full h-[84px] ">
         <div className="lg:container grid grid-cols-3 items-center">
           <div className="logo_wrapper">
             <Link
@@ -74,12 +74,14 @@ const Navbar = () => {
 
           {/* navbar middle right  */}
           <div className="navbar_middle_right flex items-center gap-5">
-            <button className="btn capitalize">
-              <ShoppingCart /> cart{" "}
-              <div className="badge badge-sm bg-[#029fae]">
-                {cartItems.length}
-              </div>
-            </button>
+            <Link to={'/cart'}>
+              <button className="btn capitalize">
+                <ShoppingCart /> cart{" "}
+                <div className="badge badge-sm bg-[#029fae]">
+                  {cartItems.length}
+                </div>
+              </button>
+            </Link>
             <button className="btn capitalize">
               <Heart />
             </button>
@@ -187,7 +189,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

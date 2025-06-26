@@ -10,6 +10,7 @@ import Register from "./Pages/Auth/Register/Register";
 import Client from "./Components/Client/Client";
 import Recent from "./Components/Recent/Recent";
 import { Provider } from "react-redux";
+import CartPage from './Pages/ Cart/CartPage'
 import store from "./redux/store";
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/recent",
         element: <Recent />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
       },
     ],
   },
